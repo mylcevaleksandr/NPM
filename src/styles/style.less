@@ -51,59 +51,57 @@
   overflow: hidden;
 }
 
+.menu__close {
+  display: none;
+}
+
 .header {
- &__container {
+  &__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-top: 38px;
     padding-bottom: 38px;
 
-    .logo__img {
+    &__img {
       width: 115px;
       cursor: pointer;
     }
 
-
-    .menu__list {
-      list-style: none;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 315px;
-
-      .menu__action {
-        font-size: 14px;
-        font-family: "Gilroy-Medium", sans-serif;
-        color: @menu-color;
-        text-decoration: none;
-        padding-bottom: 3px;
-        border-bottom: 2px solid transparent;
-        transition: all 0.5s ease;
-
-        &:hover {
-          border-bottom: 2px solid @border-color;
-        }
-      }
-
-
+   &__phone {
+      margin-left: 100px;
     }
   }
 }
 
-.header__phone {
-  margin-left: 100px;
-}
+.menu {
 
+  .menu__list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 315px;
+
+    .menu__action {
+      font-size: 14px;
+      font-family: "Gilroy-Medium", sans-serif;
+      color: @menu-color;
+      text-decoration: none;
+      padding-bottom: 3px;
+      border-bottom: 2px solid transparent;
+      transition: all 0.5s ease;
+
+      &:hover {
+        border-bottom: 2px solid @border-color;
+      }
+    }
+  }
+}
 
 .header__burger {
   display: none;
 }
-
-.menu__close {
-  display: none;
-}
-
 
 .phone {
   font-size: 16px;

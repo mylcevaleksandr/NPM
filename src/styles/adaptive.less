@@ -356,10 +356,10 @@
 }
 
 @media screen and (max-width: 425px) {
-
   .header__burger {
     display: revert;
   }
+
 
   .menu {
     display: none;
@@ -378,26 +378,21 @@
     background: @black;
     z-index: 999;
 
+    .menu__list {
+      flex-direction: column;
+      row-gap: 30px;
+
+      .menu__action {
+        font-size: 30px;
+        color: @footer-color;
+      }
+    }
   }
 
   .menu__open {
     display: flex;
   }
 
-  .wrapper {
-    .header__container {
-      .menu__list {
-        flex-direction: column;
-        row-gap: 30px;
-
-        .menu__action {
-          font-size: 30px;
-          color: @footer-color;
-
-        }
-      }
-    }
-  }
 
   .menu__close {
     display: revert;
@@ -408,7 +403,6 @@
     top: 20px;
     left: 20px;
   }
-
 
   .header__logo {
     width: 100%;
