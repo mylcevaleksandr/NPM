@@ -55,7 +55,7 @@ $( function () {
 
 } );
 
-const noScroll = document.querySelector( "html" + "body" );
+const noScroll = document.querySelector( "body" );
 
 document.getElementById( "menu-burger" ).onclick = function () {
     document.getElementById( "menu-ul" ).classList.add( "menu__open" );

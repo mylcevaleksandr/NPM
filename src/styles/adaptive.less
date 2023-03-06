@@ -248,6 +248,12 @@
 }
 
 @media screen and (max-width: 595px) {
+  .header__container {
+    flex-direction: column;
+    row-gap: 30px;
+    padding-bottom: 0;
+  }
+
   .description {
     grid-template-columns: repeat(auto-fill, 185px);
     column-gap: 15px;
@@ -267,11 +273,6 @@
 }
 
 @media screen and (max-width: 490px) {
-  .header__container {
-    flex-direction: column;
-    row-gap: 30px;
-    padding-bottom: 0;
-  }
 
   .main__header {
     font-size: 45px;
@@ -360,6 +361,13 @@
     display: revert;
   }
 
+  .header__logo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
 
   .menu {
     display: none;
@@ -385,6 +393,7 @@
       .menu__action {
         font-size: 30px;
         color: @footer-color;
+
       }
     }
   }
