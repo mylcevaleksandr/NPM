@@ -13,9 +13,9 @@
 <div class="wrapper">
     <div class="section-pink header ">
         <header class="container header__container">
-            <div class="logo header__logo">
+            <div class="logo header__container_logo">
                 <img src="src/images/logo@2x.png" alt="logo" class="logo__img">
-                <img id="menu-burger" src="src/images/burger.png" alt="burger" class="header__burger">
+                <img id="menu-burger" src="src/images/burger.png" alt="burger" class="header__container_logo-burger">
             </div>
             <nav id="menu-ul" class="menu">
                 <div class="menu__close">
@@ -125,19 +125,19 @@
 
 <section id="cakes" class="section-pink products">
     <div class="container products__container">
-        <h2 class="products__heading">Выберите свой макарун</h2>
-        <div class="products__cards">
+        <h2 class="products__container-heading">Выберите свой макарун</h2>
+        <div class="products__container-cards">
             <div class="card">
                 <div class="card__image">
                     <img src="src/images/card1.png" alt="macaroon" class="card__image-img">
                 </div>
                 <p class="card__heading">Макарун с малиной</p>
-                <div class="card__order-wrapper">
-                    <div class="card__order-details">
+                <div class="card__order_wrapper">
+                    <div class="card__order_wrapper_details">
                         <div class="card__amount">1 шт.</div>
                         <div class="card__price">1,70 руб.</div>
                     </div>
-                    <button class="btn card__btn">Заказать</button>
+                    <button class="btn card__order_wrapper_details-btn">Заказать</button>
                 </div>
             </div>
             <div class="card">
@@ -145,12 +145,12 @@
                     <img src="src/images/card2.png" alt="macaroon" class="card__image-img">
                 </div>
                 <p class="card__heading">Макарун с манго</p>
-                <div class="card__order-wrapper">
-                    <div class="card__order-details">
+                <div class="card__order_wrapper">
+                    <div class="card__order_wrapper_details">
                         <div class="card__amount">1 шт.</div>
                         <div class="card__price">1,70 руб.</div>
                     </div>
-                    <button class="btn card__btn">Заказать</button>
+                    <button class="btn card__order_wrapper_details-btn">Заказать</button>
                 </div>
             </div>
             <div class="card">
@@ -158,12 +158,12 @@
                     <img src="src/images/card3.png" alt="macaroon" class="card__image-img">
                 </div>
                 <p class="card__heading">Пирог с ванилью</p>
-                <div class="card__order-wrapper">
-                    <div class="card__order-details">
+                <div class="card__order_wrapper">
+                    <div class="card__order_wrapper_details">
                         <div class="card__amount">1 шт.</div>
                         <div class="card__price">1,70 руб.</div>
                     </div>
-                    <button class="btn card__btn">Заказать</button>
+                    <button class="btn card__order_wrapper_details-btn">Заказать</button>
                 </div>
             </div>
             <div class="card card-center">
@@ -171,12 +171,12 @@
                     <img src="src/images/card4.png" alt="macaroon" class="card__image-img">
                 </div>
                 <p class="card__heading">Пирог с фисташками</p>
-                <div class="card__order-wrapper">
-                    <div class="card__order-details">
+                <div class="card__order_wrapper">
+                    <div class="card__order_wrapper_details">
                         <div class="card__amount">1 шт.</div>
                         <div class="card__price">1,70 руб.</div>
                     </div>
-                    <button class="btn card__btn">Заказать</button>
+                    <button class="btn card__order_wrapper_details-btn">Заказать</button>
                 </div>
             </div>
         </div>
@@ -185,39 +185,40 @@
 
 <section id="place_order" class="order section-white">
     <div class="container order__container ">
-        <div class="order__image">
-            <div class="order__image-strawberry">
+        <div class="order__container_image">
+            <div class="order__container_image-strawberry">
                 <img src="src/images/strawberry.png" alt="strawberry">
             </div>
             <div>
-                <img src="src/images/macaroon3.png" alt="macaroon" class="order__image-img">
+                <img src="src/images/macaroon3.png" alt="macaroon" class="order__container_image-img">
             </div>
         </div>
-        <div class="order__info-form">
-            <h2 class="order__heading">Закажите макарун!</h2>
-            <div class="order__article">Выберите понравившийся макарун, заполните форму и ожидайте звонка нашего
+        <div class="order__container_form">
+            <h2 class="order__container_form-heading">Закажите макарун!</h2>
+            <div class="order__container_form-article">Выберите понравившийся макарун, заполните форму и ожидайте звонка
+                нашего
                 пекаря!
             </div>
             <form action="" class="order__form">
-                <label for="choice" class="form__choice bold">Ваш выбор</label>
+                <label for="choice" class="order__form_choice-label bold">Ваш выбор</label>
                 <input type="text" name="choice" id="choice" placeholder="Напишите, что хотите заказать..."
-                       class="form__textarea form-all">
+                       class="order__form_choice-input form-all">
                 <div class="error_msg">Необходимо ввести товар</div>
-                <label for="contacts" class="form__contacts bold">Заполните данные для заказа</label>
+                <label for="contacts" class="order__form_contacts-label bold">Заполните данные для заказа</label>
                 <input type="text" id="contacts" name="contacts" placeholder="Ваше имя"
-                       class="form__contact form-all">
+                       class="order__form_contacts-input form-all">
                 <div class="error_msg">Необходимо ввести ваше имя</div>
                 <input type="text" id="phone" name="phone" placeholder="+375 (__) ___ - __ - __"
-                       class="form__phone form-all">
+                       class="order__form_phone-input form-all">
                 <div class="error_msg">Необходимо ввести телефон</div>
-                <button type="button" class="btn form__btn">Оформить заказ</button>
+                <button type="button" class="btn order__form_btn">Оформить заказ</button>
             </form>
-            <div class="order__image-strawberry2">
+            <div class="order__container_form-strawberry2">
                 <img src="src/images/strawberry2.png" alt="strawberry">
             </div>
         </div>
-        <div class="order__info-message">
-            <p class="result-message">Спасибо за Ваш заказ. Мы скоро свяжемся с Вами!</p>
+        <div class="order__container_message">
+            <p class="order__container_message-result">Спасибо за Ваш заказ. Мы скоро свяжемся с Вами!</p>
         </div>
     </div>
 </section>

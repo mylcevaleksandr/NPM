@@ -4,10 +4,10 @@ $( function () {
     let product = $( "#choice" );
     let name = $( "#contacts" );
     let phone = $( "#phone" );
-    let submit = $( ".form__btn" );
+    let submit = $( ".order__form_btn" );
     let loader = $( ".loader" );
-    let form = $( ".order__info-form" );
-    let formResult = $( ".order__info-message" );
+    let form = $( ".order__container_form" );
+    let formResult = $( ".order__container_message" );
 
     $( submit ).on( "click", () => {
         $( ".error_msg" ).css( "display", "none" );
