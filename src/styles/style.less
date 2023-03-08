@@ -259,7 +259,6 @@
     .description__info {
       width: 220px;
 
-
       .description__number {
         font-size: 60px;
         font-family: "Gilroy-Extrabold", sans-serif;
@@ -274,7 +273,6 @@
         transition: all 0.5s ease;
         margin-bottom: 13px;
       }
-
 
       .description__heading {
         font-size: 20px;
@@ -507,89 +505,90 @@
   background-color: #c0707c;
   position: relative;
   overflow: hidden;
-}
 
-.footer__container {
-  font-size: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 70px;
-  padding-bottom: 65px;
-}
+  &__container {
+    font-size: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 70px;
+    padding-bottom: 65px;
 
-.footer__logo {
-  display: flex;
-  flex-flow: column;
-}
+    &_logo {
+      display: flex;
+      flex-flow: column;
 
-.rights {
-  font-size: 12px;
-  font-family: "Gilroy-Regular", sans-serif;
-  color: @rights-color;
-  margin-top: 19px;
-}
+      &-rights {
+        font-size: 12px;
+        font-family: "Gilroy-Regular", sans-serif;
+        color: @rights-color;
+        margin-top: 19px;
+      }
+    }
 
-.footer__social {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-}
+    &_social {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
 
-.social-img {
-  width: 35px;
-  cursor: pointer;
-}
+      &-img {
+        width: 35px;
+        cursor: pointer;
+      }
 
-.instagram {
-  font-size: 16px;
-  font-family: "Gilroy-Bold", sans-serif;
-  color: @main-color;
-  margin-top: 15px;
-}
+      &-instagram {
+        font-size: 16px;
+        font-family: "Gilroy-Bold", sans-serif;
+        color: @main-color;
+        margin-top: 15px;
+      }
+    }
 
-.footer__gift-parent {
-  z-index: 999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  transition: all 1s ease-in-out;
+    &_rights {
+      display: none;
+      font-size: 12px;
+      font-family: "Gilroy-Regular", sans-serif;
+      color: @rights-color;
+    }
 
-  &:hover .gift-message {
-    opacity: 1;
-    transform: translateY(0px);
-    transition: all 0.5s ease-in-out;
+    &_gift {
+      z-index: 999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      transition: all 1s ease-in-out;
+
+      &-message {
+        opacity: 0;
+        transform: translateY(64px);
+        transition: all 0.5s ease-in-out;
+        margin-right: 10px;
+      }
+
+      &-image {
+        font-size: 0;
+        cursor: pointer;
+
+        &:hover {
+          border-radius: 50%;
+          box-shadow: 0 0 12.6px 2.4px @border-color-2;
+          width: 90px;
+          height: 90px;
+        }
+      }
+
+      &:hover .footer__container_gift-message {
+        opacity: 1;
+        transform: translateY(0px);
+        transition: all 0.5s ease-in-out;
+      }
+    }
+
+
   }
-}
-
-.gift-message {
-  opacity: 0;
-  transform: translateY(64px);
-  transition: all 0.5s ease-in-out;
-  margin-right: 10px;
-}
-
-.gift-image {
-  font-size: 0;
-  cursor: pointer;
-}
-
-
-.gift-image:hover {
-  border-radius: 50%;
-  box-shadow: 0 0 12.6px 2.4px @border-color-2;
-  width: 90px;
-  height: 90px;
-}
-
-.rights2 {
-  display: none;
-  font-size: 12px;
-  font-family: "Gilroy-Regular", sans-serif;
-  color: @rights-color;
 }
 
 .loader {
@@ -622,7 +621,6 @@
     }
   }
 }
-
 
 @keyframes lds-hourglass {
   0% {
@@ -767,8 +765,6 @@
   }
 }
 
-/*strawberry animation*/
-
 @keyframes float {
   0% {
     top: -20px;
@@ -796,3 +792,4 @@
 
 @import "adaptive";
 @import "variables";
+@import "darkTheme";

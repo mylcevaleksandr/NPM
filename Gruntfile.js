@@ -1,44 +1,43 @@
+"use strict";
+
 module.exports = function ( grunt ) {
-    require( "load-grunt-tasks" )( grunt );    /* this line here */
-
-    // Project configuration.
-    grunt.initConfig( {
-        sass: {                              // Task
-            dist: {                            // Target
-                options: {                       // Target options
-                    style: "expanded"
-                },
-                files: {
-                    "dist/styles.css": "src/styles/styles.scss"
-                }
-            }
-        },
-        cssmin: {
-            target: {
-                files: {
-                    "dist/styles.min.css": [ "dist/styles.css" ]
-                }
-            }
-        },
-        clean: [ "dist/styles.css", "dist/styles.css.map" ],
-        watch: {
-            options: {
-                livereload: true,
-            },
-            css: {
-                files: [ "src/styles/*.scss" ],
-                tasks: [  "sass", "cssmin", "clean" ],
-            },
-        },
-    } );
-
-    // Load the plugin that provides the "uglify" task.
-    grunt.loadNpmTasks( "grunt-contrib-sass" );
-    grunt.loadNpmTasks( "grunt-contrib-cssmin" );
+    grunt.loadNpmTasks( "grunt-css-purge" );
     grunt.loadNpmTasks( "grunt-contrib-clean" );
     grunt.loadNpmTasks( "grunt-contrib-watch" );
+    grunt.loadNpmTasks( "grunt-contrib-less" );
 
-    // Default task(s).
-    grunt.registerTask( "default", "watch" );
+    grunt.initConfig( {
+        less: {
+            development: {
+                options: {
+                    compress: true,
+                    yuicompress: true,
+                    optimization: 2
+                },
+                files: {
+                    "dist/style.css": "src/styles/*.less" // destination file and source file
+                }
+            }
+        },
+        css_purge: {
+            site: {
+                options: {},
+                src: "dist/style.css",
+                dest: "dist/style.min.css",
+            },
+        },
 
+        clean: [ "dist/style.css", "dist/styles.css.map" ],
+
+        watch: {
+            styles: {
+                files: [ "src/styles/*.less" ], // which files to watch
+                tasks: [ "less", "css_purge", "clean" ],
+                options: {
+                    nospawn: true
+                }
+            }
+        }
+    } );
+    grunt.registerTask( "default", [ "less", "css_purge", "clean", "watch" ] );
 };

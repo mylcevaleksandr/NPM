@@ -1,5 +1,5 @@
 @media screen and (max-width: 1385px) {
-  .footer__gift-parent {
+  .footer__container_gift {
     transform: scale(75%);
     bottom: 0;
     right: -20px;
@@ -199,7 +199,6 @@
     }
   }
 
-
   .card-center, .card-center-top {
     grid-area: revert;
   }
@@ -224,18 +223,11 @@
         align-items: center;
         text-align: center;
 
+        .form-all {
+          background: transparent;
+        }
       }
     }
-  }
-
-
-  .form-all {
-    background: transparent;
-  }
-
-
-  .order__container_image-img {
-    width: 100%;
   }
 
 
@@ -277,15 +269,43 @@
       .description__info {
         width: 185px;
       }
-
     }
   }
 
+  .footer__container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 40px;
 
-  .footer__gift-parent {
-    right: -30px;
-    bottom: -5px;
+    &_logo {
+      align-items: center;
+      order: 1;
+
+      &-rights {
+        display: none;
+      }
+    }
+
+    &_social {
+      order: 3;
+    }
+
+    &_rights {
+      order: 4;
+      display: revert;
+    }
+
+    &_phone {
+      order: 2;
+    }
+
+    &_gift {
+      right: -30px;
+      bottom: -5px;
+    }
   }
+
 }
 
 @media screen and (max-width: 490px) {
@@ -296,7 +316,6 @@
       }
     }
   }
-
 
   .about__container {
     padding-left: 15px;
@@ -315,39 +334,6 @@
       }
 
     }
-  }
-
-
-  .footer__container {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    row-gap: 40px;
-  }
-
-  .footer__logo {
-    align-items: center;
-    order: 1;
-  }
-
-  .footer__social {
-    order: 3;
-  }
-
-  .footer__phone {
-    order: 2;
-  }
-
-  .rights2 {
-    order: 4;
-  }
-
-  .rights {
-    display: none;
-  }
-
-  .rights2 {
-    display: revert;
   }
 
   @keyframes float2 {
@@ -377,8 +363,6 @@
       }
     }
   }
-
-
 }
 
 @media screen and (max-width: 425px) {
@@ -442,7 +426,6 @@
     top: 20px;
     left: 20px;
   }
-
 }
 
 @media screen and(max-width: 408px) {
@@ -468,7 +451,6 @@
       }
     }
   }
-
 
   .about__container {
     padding: 100px 16px;
@@ -514,7 +496,6 @@
     }
   }
 
-
   .products__container {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -527,7 +508,6 @@
       row-gap: 142px;
     }
   }
-
 
   .order__container {
     padding-top: 100px;
@@ -569,7 +549,6 @@
     }
   }
 
-
   @keyframes float {
     0% {
       top: -85px;
@@ -592,8 +571,6 @@
       row-gap: 30px;
     }
   }
-
-
 }
 
 @media screen and (max-width: 342px) {
@@ -607,8 +584,7 @@
       }
     }
   }
-
-
 }
 
 @import "variables";
+@import "darkTheme";
