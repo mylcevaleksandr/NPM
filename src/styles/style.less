@@ -551,6 +551,7 @@
       color: @rights-color;
     }
 
+
     &_gift {
       z-index: 999;
       display: flex;
@@ -561,11 +562,48 @@
       right: 30px;
       transition: all 1s ease-in-out;
 
+
       &-message {
+        border-width: 2px;
+        border-color: rgb(119, 10, 29);
+        border-style: solid;
+        border-radius: 10px;
+        background-color: rgb(254, 239, 238);
+        padding: 15px 12px;
+        left: 1608px;
+        top: 3199px;
+        width: 168px;
         opacity: 0;
         transform: translateY(64px);
         transition: all 0.5s ease-in-out;
-        margin-right: 10px;
+        margin-right: 25px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          border: 15px solid transparent;
+          border-left: 15px solid #770a1d;
+          right: -30px;
+          bottom: 20px;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          border: 15px solid transparent;
+          border-left: 15px solid #fff;
+          right: -27px;
+          bottom: 20px;
+        }
+
+        span {
+          display: block;
+          font-size: 17px;
+          font-family: "Gilroy";
+          font-weight: 600;
+          color: rgb(119, 10, 29);
+          line-height: 1.333;
+        }
       }
 
       &-image {
