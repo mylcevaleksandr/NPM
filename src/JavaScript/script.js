@@ -30,7 +30,7 @@ $(function () {
             loader.css("display", "flex");
             $.ajax({
                 method: "POST",
-                url: "https://testologia.site/checkout",
+                url: "http://testologia.site/checkout",
                 data: {product: product.val(), name: name.val(), phone: phone.val()}
             })
                 .done((msg) => {
@@ -46,10 +46,11 @@ $(function () {
                             location.reload();
                         }, 5000);
                     }
-                }).fail((jqXHR, textStatus, errorThrown) => {
-                alert("AJAX request failed: "+ textStatus);
-                loader.hide();
-            });
+                })
+                .fail((jqXHR, textStatus, errorThrown) => {
+                    alert("AJAX request failed: " + textStatus);
+                    loader.hide();
+                });
         }
 
 
